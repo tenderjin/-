@@ -31,11 +31,14 @@ jobs:
       - name: Install step
         run: "deno install "
 
+      - name: Build step
+        run: " deno run -A deno.ts"
+
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
           project: "tenderjin-64"
-          entrypoint: " deno run -A deno.ts"
+          entrypoint: ""
           root: ""
           
           
