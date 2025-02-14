@@ -29,10 +29,7 @@ jobs:
           node-version: lts/*
 
       - name: Install step
-        run: "deno install "
-
-      - name: Build step
-        run: " deno run -A deno.ts"
+        run: "npm install && node --experimental-strip-types node.ts"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
